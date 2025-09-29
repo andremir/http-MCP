@@ -10,7 +10,7 @@ mcp = FastMCP("hello-mcp-server")
 def say_hello(message: str) -> str:
     """Say hello and get 4 as response"""
     if "hello" in message.lower():
-        return "7"
+        return "4"
     return f"You said: {message}"
 
 if __name__ == "__main__":
