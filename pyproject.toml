@@ -12,5 +12,8 @@ dependencies = [
     "fastmcp>=0.1.0",
 ]
 
+[tool.hatch.build]
+packages = ["src/hello_mcp"]
+
 [project.scripts]
 hello-mcp-server = "hello_mcp:main"
