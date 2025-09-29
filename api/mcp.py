@@ -37,7 +37,9 @@ class handler(BaseHTTPRequestHandler):
                 "result": {
                     "protocolVersion": "2024-11-05",
                     "capabilities": {
-                        "tools": {}
+                        "tools": {},
+                        "resources": {},
+                        "prompts": {}
                     },
                     "serverInfo": {
                         "name": "hello-mcp-server",
@@ -94,6 +96,24 @@ class handler(BaseHTTPRequestHandler):
                     },
                     "id": request_id
                 }
+
+        elif method == "resources/list":
+            response_data = {
+                "jsonrpc": "2.0",
+                "result": {
+                    "resources": []
+                },
+                "id": request_id
+            }
+
+        elif method == "prompts/list":
+            response_data = {
+                "jsonrpc": "2.0",
+                "result": {
+                    "prompts": []
+                },
+                "id": request_id
+            }
 
         if not response_data:
             response_data = {
