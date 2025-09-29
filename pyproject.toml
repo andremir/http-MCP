@@ -13,4 +13,4 @@ dependencies = [
 ]
 
 [project.scripts]
-hello-mcp-server = "server_stdio:main"
+hello-mcp-server = "hello_mcp:main"
